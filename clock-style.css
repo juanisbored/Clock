@@ -1,0 +1,86 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-image: url(Images/820.gif);
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    font-family: sans-serif;
+    position: relative;
+  }
+
+  .button-container{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-shadow: black;
+    transform: translate(-50%);
+  }
+
+  .button{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: white;
+    text-shadow: red;
+    border-radius: 1px solid white;
+    transition:all ;
+    transition-duration: .5s;
+    box-shadow: 0px 3px 3px 0px red, 0 7px 45px 0 red;
+    overflow: hidden;
+    z-index: 1;
+    
+  }
+
+.button:hover{
+  color: white;
+}
+
+  .button::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: skew(20deg);
+    z-index: -1;
+    left: -110%;
+    background-color: red;
+    transition: all;
+    transition-duration:.5s ;
+
+  } 
+   .button::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: skew(20deg);
+    z-index: -1;
+    right: -110%;
+    background-color: black;
+    transition: all;
+    transition-duration:.5s ;
+
+  }
+
+  .button:hover::before{
+left: -50%;
+}
+
+.button:hover::after{
+right: -50%;
+}
